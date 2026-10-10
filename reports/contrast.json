@@ -1,0 +1,26 @@
+[
+  {
+    "name": "dark primary",
+    "ratio": 18.66
+  },
+  {
+    "name": "dark secondary",
+    "ratio": 7.46
+  },
+  {
+    "name": "light primary",
+    "ratio": 17.97
+  },
+  {
+    "name": "light secondary",
+    "ratio": 6.03
+  },
+  {
+    "name": "CTA secondary",
+    "ratio": 8.0
+  },
+  {
+    "name": "CTA border",
+    "ratio": 3.41
+  }
+]

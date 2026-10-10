@@ -1,0 +1,157 @@
+[
+  {
+    "name": "sem overflow 375",
+    "pass": true,
+    "details": "360/360"
+  },
+  {
+    "name": "projetos preservados 375",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "sem erros de runtime 375",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "sem overflow 768",
+    "pass": true,
+    "details": "753/753"
+  },
+  {
+    "name": "projetos preservados 768",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "sem erros de runtime 768",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "sem overflow 1440",
+    "pass": true,
+    "details": "1425/1425"
+  },
+  {
+    "name": "projetos preservados 1440",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "sem erros de runtime 1440",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "preferência inicial clara (simulação)",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "tema manual e aria-pressed",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "tema persistido",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "pausa manual",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "texto ampliado 200% desktop",
+    "pass": true,
+    "details": "[]"
+  },
+  {
+    "name": "reduced motion JS (simulação)",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "cena estática reduced motion",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "touch sem cursor customizado (simulação)",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "fallback sem WebGL",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "conteúdo estático sem JavaScript",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "no-JS mobile sem overflow",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "viewer: sete fixtures isoladas",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "certificados ordenados por data",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "viewer abre",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "foco entra no viewer",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "foco retorna ao acionador",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "filtro de categoria",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "link de verificação seguro",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "arquivo removido",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "três redes reais",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "console final limpo",
+    "pass": true,
+    "details": ""
+  },
+  {
+    "name": "final timing / mesmo navegador",
+    "pass": true,
+    "details": "{\"navigation\":[{\"load\":38.19999998807907,\"dom\":29.5}],\"metrics\":{\"cls\":0.0011336143086761738,\"lcp\":48},\"bytes\":1101076}"
+  }
+]

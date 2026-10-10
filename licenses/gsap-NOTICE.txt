@@ -1,0 +1,4 @@
+GSAP 3.13.0 / ScrollTrigger 3.13.0
+Copyright GreenSock / Webflow. See the license headers in dist/vendor/gsap.min.js and ScrollTrigger.min.js.
+License declared by the package: Standard 'no charge' license.
+https://gsap.com/standard-license
