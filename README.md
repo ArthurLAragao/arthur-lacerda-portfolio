@@ -26,7 +26,7 @@ The preview address is printed by the server. Publish only `dist/`; configuratio
 - Images and sharing artwork: `dist/assets/`.
 - Visual tokens: `dist/tokens.css`; layout: `dist/styles.css`; motion: `dist/motion.js`, `dist/experience.css` and `dist/scene.js`.
 
-Sonora and Atlas are explicitly marked as concept studies. Replace them with real projects and URLs when available. Empty email, résumé and certificate fields do not claim credentials or contact details.
+Atlas links to the public application; Lumen links to the showcase and installation guide for the local application. The project screenshots are from each project’s public documentation. Empty email, résumé and certificate fields do not claim credentials or contact details.
 
 Set `siteUrl` in `dist/config.js` to the actual published HTTPS address before building. This generates the canonical URL, social image URLs and structured-data URLs.
 

@@ -2,24 +2,48 @@
    Ao adicionar trabalhos reais, atualize concept, descrição, stack, ano e URLs.
    Uma imagem em project.image substitui a demonstração visual. */
 window.PORTFOLIO = {
-  name: 'Arthur Lacerda', role: 'Estudante de Computação / Software Developer',
-  location: 'Fortaleza, Brasil', status: '', siteUrl: 'https://arthurlaragao.github.io/arthur-lacerda-portfolio/', updated: '2026-09-30',
-  positioning: 'Construindo software. Explorando sistemas.',
-  currentFocus: ['DevOps e automação: do código à operação.', 'AI Engineering: experimentar, avaliar e aprender.', 'Cloud e fundamentos para explorar MLOps.'],
+  name: 'Arthur Lacerda', role: 'Engenharia de Software / AI Engineering',
+  location: 'Fortaleza, Brasil', status: '', siteUrl: 'https://arthurlaragao.github.io/arthur-lacerda-portfolio/', updated: '2026-11-15',
+  positioning: 'Desenvolvimento web, automação e IA aplicada.',
+  currentFocus: [
+    'Engenharia de Software: aplicações web, arquitetura local-first, testes e entrega contínua.',
+    'AI Engineering: integrar IA a fluxos de captura, estruturação e revisão humana.',
+    'Fundamentos de cloud e MLOps: aprofundar o caminho do desenvolvimento à operação.'
+  ],
   softSkills: [{name:'Organização',context:'Dividir projetos em etapas pequenas, com escopo e próximos passos claros.'},{name:'Resolução de problemas',context:'Aprender com implementação, depuração e revisão das decisões.'},{name:'Comunicação',context:'Buscar clareza ao explicar ideias, registrar aprendizados e colaborar.'}], email: '', /* TODO: inserir email profissional quando fornecido. */ github: 'https://github.com/ArthurLAragao', linkedin: 'https://www.linkedin.com/in/arthur-lacerda-213788343/', instagram: 'https://www.instagram.com/arthurlaragao/', resume: '',
   portrait: 'assets/portrait.webp', portraitAlt: 'Retrato editorial ilustrativo gerado por IA; não representa Arthur Lacerda',
   projects: [
-    {id:'sonora',name:'Sonora',category:'MUSIC × DATA',year:'CONCEITO',stack:'JavaScript · Spotify API · Interface',description:'Uma direção de interface para explorar hábitos musicais e transformar dados de escuta em descobertas.',type:'sonora',concept:true,role:'',result:'',caseStudy:'',image:'',demo:'',repository:'',problem:'Como tornar um histórico de escuta mais fácil de explorar, sem reduzir a experiência musical a números?',solution:'Uma proposta de navegação que combina faixas, padrões de escuta e recomendações em uma interface silenciosa, com a música em primeiro plano.',learning:'Este é um estudo visual demonstrativo. Integração com Spotify, autenticação e dados reais ainda não foram implementados. Substitua pelo contexto, decisões e resultados de um projeto seu.'},
-    {id:'atlas',name:'Atlas',category:'PRODUCTIVITY × SYSTEMS',year:'CONCEITO',stack:'Python · APIs · Visualização de dados',description:'Um estudo de ferramenta pessoal para organizar rotinas e visualizar progresso com clareza.',type:'atlas',concept:true,role:'',result:'',caseStudy:'',image:'',demo:'',repository:'',problem:'Como reunir prioridades e progresso em uma visão útil, sem criar mais trabalho de organização?',solution:'Uma proposta de síntese semanal com poucas métricas e uma leitura direta de foco, atividades e evolução.',learning:'Os números da prévia são ilustrativos. Não há backend ou coleta de dados. Use este espaço para documentar arquitetura, testes e aprendizados de um trabalho real.'}
+    {
+      id: 'atlas', name: 'Atlas', category: 'PRODUTIVIDADE', year: '2026',
+      stack: 'React · TypeScript · IndexedDB · Vite · PWA',
+      description: 'Um espaço de trabalho pessoal para organizar tarefas, hábitos, notas, metas e estudos com dados armazenados no próprio navegador.',
+      image: 'assets/atlas-desktop.webp', imageAlt: 'Tela Hoje do Atlas, com resumo de atividades, anotações e atalhos de estudo.',
+      demo: 'https://arthurlaragao.github.io/atlas/', demoLabel: 'Abrir Atlas',
+      repository: 'https://github.com/ArthurLAragao/atlas',
+      problem: 'Organizar o dia e acompanhar objetivos sem espalhar tarefas, notas e hábitos por várias ferramentas.',
+      solution: 'Uma aplicação web progressiva com tarefas em lista, Kanban e calendário, acompanhamento de hábitos, notas em Markdown, metas, flashcards e temporizador de foco.',
+      result: 'Aplicação pública que pode ser usada sem criar conta.',
+      learning: 'A versão web grava os dados em IndexedDB e permite exportar backups em JSON. Cada navegador tem seu próprio armazenamento. A sincronização em nuvem não faz parte da versão pública.'
+    },
+    {
+      id: 'lumen', name: 'Lumen', category: 'CONHECIMENTO E IA', year: '2026',
+      stack: 'React · TypeScript · Python · Markdown · Codex',
+      description: 'Uma ferramenta local para transformar vídeos, links, PDFs e ideias em notas estruturadas, com revisão antes de enviar ao Obsidian ou Notion.',
+      image: 'assets/lumen-desktop.webp', imageAlt: 'Tela de captura do Lumen, com entrada para links e arquivos e escolha de destino.',
+      demo: 'https://arthurlaragao.github.io/lumen-organizer/', demoLabel: 'Conhecer o Lumen',
+      repository: 'https://github.com/ArthurLAragao/lumen-organizer',
+      problem: 'Reduzir o trabalho manual entre encontrar uma fonte útil e transformá-la em uma nota que possa ser revisada e recuperada depois.',
+      solution: 'A interface em React orienta a captura e a prévia editável. Um serviço local em Python processa as fontes e usa o acesso configurado ao Codex para gerar notas. A transferência depende de confirmação e fica registrada no histórico.',
+      result: 'Código e instruções de instalação públicos. A aplicação funciona localmente.',
+      learning: 'A geração automatiza a estruturação inicial; a revisão humana ajuda a conferir o conteúdo antes de escolher o destino. A página pública apresenta o projeto e não executa o serviço local.'
+    }
   ],
-  skills:[
-    {name:'Linguagens e desenvolvimento',caption:'Uso atual em estudos e projetos',items:'JavaScript · Python · Java · HTML · CSS'},
-    {name:'Frontend e produto',caption:'Familiaridade em projetos',items:'Interfaces web · APIs · Prototipagem'},
-    {name:'Cloud e DevOps',caption:'Em aprendizado',items:'AWS · Automação · Fundamentos de entrega e operação'},
-    {name:'IA e dados',caption:'Em exploração',items:'Inteligência artificial aplicada · AI Engineering · Interesse em MLOps'},
-    {name:'Ferramentas e sistemas',caption:'Uso atual e familiaridade',items:'Git & GitHub · Godot · GDScript · Jogos 2D'},
-    {name:'Em aprendizado',caption:'Áreas de aprofundamento',items:'Cloud · DevOps · Cibersegurança · Inteligência artificial'}
-  ],
-  suggestedLearning: ['TypeScript','React','Node.js','SQL','Docker','C#']
+  skills: [
+    {name:'Engenharia de Software',caption:'Uso em projetos',items:'TypeScript · JavaScript · Python · Arquitetura local-first · Testes automatizados'},
+    {name:'Desenvolvimento web',caption:'Uso em Atlas e Lumen',items:'React · HTML · CSS · Vite · PWA · IndexedDB'},
+    {name:'Engenharia de IA / AI Engineering',caption:'IA aplicada no Lumen',items:'Processamento de fontes · Geração de notas estruturadas · Revisão humana · Integração com Obsidian e Notion'},
+    {name:'Versionamento e entrega',caption:'Prática em projetos publicados',items:'Git · GitHub · GitHub Actions · GitHub Pages · Documentação técnica'},
+    {name:'Fundamentos e experimentação',caption:'Uso em estudos',items:'Java · Estruturas de dados · Godot · GDScript'},
+    {name:'Em aprendizado',caption:'Áreas de aprofundamento',items:'AWS · Cloud · MLOps · Cibersegurança · C#'}
+  ]
 };
-

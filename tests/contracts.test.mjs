@@ -5,7 +5,7 @@ import path from 'node:path';
 import {loadData,base} from '../scripts/build.mjs';
 const {PORTFOLIO:d,CERTIFICATES:c,PortfolioRender:r}=loadData();
 test('URLs recusam scripts, credenciais e caminhos externos; aceitam assets no file://',()=>{for(const u of ['javascript:alert(1)','data:text/html,oi','https://u:p@example.com','assets/../secret','//evil.test','assets/a\nb'])assert.equal(r.safeUrl(u),'');assert.equal(r.safeUrl('assets/cv.pdf'),'assets/cv.pdf');assert.equal(r.safeUrl('https://example.com'),'https://example.com/');});
-test('Nenhuma credencial inventada publicada',()=>{assert.equal(c.length,0);assert.match(r.certificates(c),/Conhecimento que vira prática/);assert.doesNotMatch(r.certificates(c),/data-certificate=/);});
+test('Nenhuma credencial inventada publicada',()=>{assert.equal(c.length,0);assert.match(r.certificates(c),/Ciência da Computação/);assert.doesNotMatch(r.certificates(c),/data-certificate=/);});
 test('Certificados válidos são ordenados e links ausentes não viram botões fictícios',()=>{const list=[{id:'old',title:'TESTE',issuer:'FIXTURE',issueDate:'2024-01-01',category:'other',skills:[]},{id:'new',title:'TESTE 2',issuer:'FIXTURE',issueDate:'2026-09-01',category:'development',skills:[],featured:true}];assert.equal(r.validCertificates(list)[0].id,'new');assert.match(r.certificates(list),/data-certificate="new"/);assert.doesNotMatch(r.certificateDetail(list[0]),/href=/);});
 test('Dados não viram HTML executável',()=>{assert.equal(r.esc('<img onerror="x">'),'&lt;img onerror=&quot;x&quot;&gt;');const malicious={...d,projects:[{...d.projects[0],name:'<script>x</script>'}]};assert.doesNotMatch(r.projects(malicious),/<script>/);});
 test('Contatos vazios são texto, não ações inoperantes',()=>{assert.doesNotMatch(r.socials({...d,github:'',linkedin:'',instagram:'',resume:''}),/<button|href=/);assert.doesNotMatch(r.contact(d),/mailto:/);});
@@ -21,4 +21,17 @@ test('Identidade e redes reais consistentes no HTML estático e JSON-LD',()=>{
  assert.deepEqual(graph['@graph'][0].sameAs,[d.github,d.linkedin,d.instagram]);
  assert.equal((r.socials(d).match(/rel="noopener noreferrer"/g)||[]).length,3);
  assert.doesNotMatch(html,/Caderno aberto|id="lab"|em processo|EM CONSTRUÇÃO CONTÍNUA/);
+});
+
+test('Projetos publicados têm links e capturas próprias, sem estudos conceituais',()=>{
+ const html=fs.readFileSync(path.join(base,'dist/index.html'),'utf8');
+ assert.deepEqual([...html.matchAll(/<article class="project reveal" id="project-([^"]+)"/g)].map(m=>m[1]),['atlas','lumen']);
+ for(const p of d.projects){
+  assert.ok(fs.existsSync(path.join(base,'dist',p.image)));
+  assert.match(html,new RegExp('href="'+r.esc(p.demo)+'"'));
+  assert.match(html,new RegExp('href="'+r.esc(p.repository)+'"'));
+ }
+ assert.match(html,/Conhecer o Lumen/);
+ assert.match(html,/Engenharia de Software e IA/);
+ assert.doesNotMatch(html,/ESTUDO DE INTERFACE|CONCEITO · NÃO PUBLICADO/);
 });
